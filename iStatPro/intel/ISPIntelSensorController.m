@@ -16,20 +16,20 @@
 	[keyDisplayNames release];
 
 	SMCClose(&conn2);
-	smc_close();	
+//	smc_close();
 	[super dealloc];
 }
 
 
 - (id)init {
 	self = [super init];
-	kern_return_t result = SMCOpen(&conn2);
+	kern_return_t result = SMCOpen("ServiceName", &conn2);
     if (result != kIOReturnSuccess){
 		supported = NO;
 		return self;
 	}
 	supported = YES;
-	smc_init();
+//	smc_init();
 	
 	supportedKeys = [[NSMutableArray alloc] init];
 	[self setKeys];
@@ -205,7 +205,7 @@
 	NSEnumerator *keyEnumerator = [availableKeys objectEnumerator];
 	NSString *key;
 	while(key = [keyEnumerator nextObject]){
-		kern_return_t result = SMCReadKey2([key cString], &val,conn2);
+		kern_return_t result = SMCReadKey(conn2, [key cString], &val);
 		if (result == kIOReturnSuccess){
 			if (val.dataSize > 0) {
 				if(((val.bytes[0] * 256 + val.bytes[1]) >> 2)/64 <= 0)
@@ -273,17 +273,17 @@
     int           totalFans, i;
 	SMCVal_t      val;
 
-    kern_return_t result = SMCReadKey("FNum", &val);
+    kern_return_t result = SMCReadKey(conn2, "FNum", &val);
     if (result != kIOReturnSuccess)
         return [NSArray array];
 
-   totalFans = _strtoul(val.bytes, val.dataSize, 10); 
+    totalFans = _strtoul(val.bytes, val.dataSize, 10);
 
 	NSMutableArray *fans = [[NSMutableArray alloc] init];
     for (i = 0; i < totalFans; i++)
     {
         sprintf(key, "F%dAc", i); 
-        SMCReadKey(key, &val); 
+        SMCReadKey(conn2, key, &val);
 		[fans addObject:[NSString stringWithFormat:@"Fan %i",i]];
     }
 
@@ -301,7 +301,7 @@
 	NSMutableString *desc;
 	desc = [[NSMutableString alloc]init];
 	sprintf(key, "F%dID", number);
-	result = SMCReadKey2(key, &val,conn2);
+	result = SMCReadKey(conn2, key, &val);
 	int i;
 	for (i = 0; i < val.dataSize; i++) {
 		if ((int)val.bytes[i ] >32) {
@@ -320,7 +320,7 @@
     int           totalFans, i;
 	SMCVal_t      val;
 
-	kern_return_t result = SMCReadKey("FNum", &val);
+	kern_return_t result = SMCReadKey(conn2, "FNum", &val);
     if (result != kIOReturnSuccess)
         return [NSDictionary dictionary];
 
@@ -329,8 +329,9 @@
 	NSMutableDictionary *fans = [[NSMutableDictionary alloc] init];
     for (i = 0; i < totalFans; i++) {
         sprintf(key, "F%dAc", i); 
-        SMCReadKey(key, &val); 
-		[fans setValue:[NSString stringWithFormat:@"%@rpm",[NSNumber numberWithInt:_strtof(val.bytes, val.dataSize, 2)]] forKey:[self getFanName:i]];
+        SMCReadKey(conn2, key, &val);
+        [fans setValue:[NSString stringWithFormat:@"%@rpm",[NSNumber numberWithInt:1]] forKey:[self getFanName:i]];
+//		[fans setValue:[NSString stringWithFormat:@"%@rpm",[NSNumber numberWithInt:_strtof(val.bytes, val.dataSize, 2)]] forKey:[self getFanName:i]];
 	}
 
 	return [fans autorelease];
@@ -343,7 +344,7 @@
 	NSEnumerator *keyEnumerator = [supportedKeys objectEnumerator];
 	NSString *key;
 	while(key = [keyEnumerator nextObject]){
-		kern_return_t result = SMCReadKey2([key cString], &val, conn2);
+		kern_return_t result = SMCReadKey(conn2, [key cString], &val);
 		if (result == kIOReturnSuccess){
 			if (val.dataSize > 0) {
 				if(((val.bytes[0] * 256 + val.bytes[1]) >> 2)/64 == 0)
