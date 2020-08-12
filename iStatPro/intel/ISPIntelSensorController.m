@@ -6,6 +6,7 @@
 //  Copyright 2007 iSlayer & Distorted Vista. All rights reserved.
 
 #import "ISPIntelSensorController.h"
+#import "smc.h"
 
 @implementation ISPIntelSensorController
 

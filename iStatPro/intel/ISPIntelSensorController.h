@@ -6,7 +6,7 @@
 //  Copyright 2007 iSlayer & Distorted Vista. All rights reserved.
 
 #import <Cocoa/Cocoa.h>
-#import <smc.h>
+#include "smc.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>

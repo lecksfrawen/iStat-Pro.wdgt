@@ -17,6 +17,7 @@
 #define kBatteryTimeCharged -2
 
 #import "ISPDataMinerBattery.h"
+#include <IOKit/ps/IOPowerSources.h>
 
 @implementation ISPDataMinerBattery
 

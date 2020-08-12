@@ -9,6 +9,7 @@
 #import "iStatPro.h"
 #import <IOBluetooth/objc/IOBluetoothDevice.h>
 #include <DiskArbitration/DiskArbitration.h>
+#include "PPPLib.h"
 
 @implementation iStatPro
 
