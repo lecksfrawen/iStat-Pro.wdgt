@@ -1,0 +1,45 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = ISTFileDownloader; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                failed = NSView; 
+                failedIndicator = NSProgressIndicator; 
+                failedMessage = NSTextField; 
+                main = NSView; 
+                mainIndicator = NSProgressIndicator; 
+                replace = NSView; 
+                replaceIndicator = NSProgressIndicator; 
+                success = NSView; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                downloadAndInstall = id; 
+                getSource = id; 
+                replaceAndInstall = id; 
+                retry = id; 
+                showManualInstructions = id; 
+            }; 
+            CLASS = iSlayerFileDownloader; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                failed = NSView; 
+                failedIndicator = NSProgressIndicator; 
+                failedMessage = NSTextField; 
+                main = NSView; 
+                mainIndicator = NSProgressIndicator; 
+                replace = NSView; 
+                replaceIndicator = NSProgressIndicator; 
+                success = NSView; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

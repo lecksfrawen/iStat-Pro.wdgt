@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		94066BD50FEDBE4300226F06 /* NetworkHistoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 94066BD40FEDBE4300226F06 /* NetworkHistoryObject.m */; };
+		944DDF860BC8F5EE0018DBB5 /* ISPDataMinerBattery.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF790BC8F5EE0018DBB5 /* ISPDataMinerBattery.m */; };
+		944DDF870BC8F5EE0018DBB5 /* ISPDataMinerCPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF7B0BC8F5EE0018DBB5 /* ISPDataMinerCPU.m */; };
+		944DDF880BC8F5EE0018DBB5 /* ISPDataMinerDisks.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF7D0BC8F5EE0018DBB5 /* ISPDataMinerDisks.m */; };
+		944DDF890BC8F5EE0018DBB5 /* ISPDataMinerFans.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF7F0BC8F5EE0018DBB5 /* ISPDataMinerFans.m */; };
+		944DDF8A0BC8F5EE0018DBB5 /* ISPDataMinerMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF810BC8F5EE0018DBB5 /* ISPDataMinerMemory.m */; };
+		944DDF8B0BC8F5EE0018DBB5 /* ISPDataMinerNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF830BC8F5EE0018DBB5 /* ISPDataMinerNetwork.m */; };
+		944DDF8C0BC8F5EE0018DBB5 /* ISPDataMinerTemps.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF850BC8F5EE0018DBB5 /* ISPDataMinerTemps.m */; };
+		944DDF8F0BC8F6070018DBB5 /* iStatPro.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DDF8E0BC8F6070018DBB5 /* iStatPro.m */; };
+		944DDF960BC8F66A0018DBB5 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944DDF940BC8F66A0018DBB5 /* IOKit.framework */; };
+		944DDF970BC8F66A0018DBB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944DDF950BC8F66A0018DBB5 /* SystemConfiguration.framework */; };
+		944E8CF60C1C85950050B1DF /* ISPSmartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944E8CF50C1C85950050B1DF /* ISPSmartController.m */; };
+		949C5F600CF23A4D00ED694B /* ISPNetworkConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949C5F5F0CF23A4D00ED694B /* ISPNetworkConnectionController.m */; };
+		949C5F730CF2401F00ED694B /* PPPLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 949C5F720CF2401F00ED694B /* PPPLib.c */; };
+		94A8AC060BD4379D0006D819 /* ISPBluetoothController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8AC050BD4379D0006D819 /* ISPBluetoothController.m */; };
+		94A8AC380BD43E690006D819 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A8AC370BD43E690006D819 /* IOBluetooth.framework */; };
+		94A8AE2C0BD7028B0006D819 /* ISPIntelSensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8AE290BD7028B0006D819 /* ISPIntelSensorController.m */; };
+		94A8AE2D0BD7028B0006D819 /* smc.c in Sources */ = {isa = PBXBuildFile; fileRef = 94A8AE2A0BD7028B0006D819 /* smc.c */; };
+		94A8B1AC0BD8C8DD0006D819 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 94A8B1AB0BD8C8DD0006D819 /* LICENSE */; };
+		94AA2EAE0F3264EA007AEFE1 /* ISMDiskObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AA2EAC0F3264EA007AEFE1 /* ISMDiskObject.m */; };
+		94AA2EB00F326518007AEFE1 /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AA2EAF0F326518007AEFE1 /* DiskArbitration.framework */; };
+		94ACE17D0F79F4130005D5BA /* DataMinerDiskActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 94ACE17B0F79F4130005D5BA /* DataMinerDiskActivity.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* iStatPro_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iStatPro_Prefix.pch; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* iStatPro.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iStatPro.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94066BD30FEDBE4300226F06 /* NetworkHistoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHistoryObject.h; sourceTree = "<group>"; };
+		94066BD40FEDBE4300226F06 /* NetworkHistoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHistoryObject.m; sourceTree = "<group>"; };
+		940800B30E3487030014C73F /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		944DDF780BC8F5EE0018DBB5 /* ISPDataMinerBattery.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPDataMinerBattery.h; sourceTree = "<group>"; };
+		944DDF790BC8F5EE0018DBB5 /* ISPDataMinerBattery.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPDataMinerBattery.m; sourceTree = "<group>"; };
+		944DDF7A0BC8F5EE0018DBB5 /* ISPDataMinerCPU.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPDataMinerCPU.h; sourceTree = "<group>"; };
+		944DDF7B0BC8F5EE0018DBB5 /* ISPDataMinerCPU.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPDataMinerCPU.m; sourceTree = "<group>"; };
+		944DDF7C0BC8F5EE0018DBB5 /* ISPDataMinerDisks.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPDataMinerDisks.h; sourceTree = "<group>"; };
+		944DDF7D0BC8F5EE0018DBB5 /* ISPDataMinerDisks.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPDataMinerDisks.m; sourceTree = "<group>"; };
+		944DDF7E0BC8F5EE0018DBB5 /* ISPDataMinerFans.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPDataMinerFans.h; sourceTree = "<group>"; };
+		944DDF7F0BC8F5EE0018DBB5 /* ISPDataMinerFans.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPDataMinerFans.m; sourceTree = "<group>"; };
+		944DDF800BC8F5EE0018DBB5 /* ISPDataMinerMemory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPDataMinerMemory.h; sourceTree = "<group>"; };
+		944DDF810BC8F5EE0018DBB5 /* ISPDataMinerMemory.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPDataMinerMemory.m; sourceTree = "<group>"; };
+		944DDF820BC8F5EE0018DBB5 /* ISPDataMinerNetwork.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPDataMinerNetwork.h; sourceTree = "<group>"; };
+		944DDF830BC8F5EE0018DBB5 /* ISPDataMinerNetwork.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPDataMinerNetwork.m; sourceTree = "<group>"; };
+		944DDF840BC8F5EE0018DBB5 /* ISPDataMinerTemps.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPDataMinerTemps.h; sourceTree = "<group>"; };
+		944DDF850BC8F5EE0018DBB5 /* ISPDataMinerTemps.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPDataMinerTemps.m; sourceTree = "<group>"; };
+		944DDF8D0BC8F6070018DBB5 /* iStatPro.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = iStatPro.h; sourceTree = "<group>"; };
+		944DDF8E0BC8F6070018DBB5 /* iStatPro.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = iStatPro.m; sourceTree = "<group>"; };
+		944DDF940BC8F66A0018DBB5 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		944DDF950BC8F66A0018DBB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		944E8CF40C1C85950050B1DF /* ISPSmartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPSmartController.h; sourceTree = "<group>"; };
+		944E8CF50C1C85950050B1DF /* ISPSmartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPSmartController.m; sourceTree = "<group>"; };
+		949C5F5E0CF23A4D00ED694B /* ISPNetworkConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPNetworkConnectionController.h; sourceTree = "<group>"; };
+		949C5F5F0CF23A4D00ED694B /* ISPNetworkConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPNetworkConnectionController.m; sourceTree = "<group>"; };
+		949C5F700CF2401F00ED694B /* ppp_msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ppp_msg.h; sourceTree = SOURCE_ROOT; };
+		949C5F710CF2401F00ED694B /* PPPLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPLib.h; sourceTree = SOURCE_ROOT; };
+		949C5F720CF2401F00ED694B /* PPPLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PPPLib.c; sourceTree = SOURCE_ROOT; };
+		94A8AC040BD4379D0006D819 /* ISPBluetoothController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPBluetoothController.h; sourceTree = "<group>"; };
+		94A8AC050BD4379D0006D819 /* ISPBluetoothController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPBluetoothController.m; sourceTree = "<group>"; };
+		94A8AC370BD43E690006D819 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = /System/Library/Frameworks/IOBluetooth.framework; sourceTree = "<absolute>"; };
+		94A8AE280BD7028B0006D819 /* ISPIntelSensorController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ISPIntelSensorController.h; sourceTree = "<group>"; };
+		94A8AE290BD7028B0006D819 /* ISPIntelSensorController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ISPIntelSensorController.m; sourceTree = "<group>"; };
+		94A8AE2A0BD7028B0006D819 /* smc.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smc.c; sourceTree = "<group>"; };
+		94A8AE2B0BD7028B0006D819 /* smc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
+		94A8B1AB0BD8C8DD0006D819 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		94AA2EAC0F3264EA007AEFE1 /* ISMDiskObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMDiskObject.m; sourceTree = SOURCE_ROOT; };
+		94AA2EAD0F3264EA007AEFE1 /* ISMDiskObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMDiskObject.h; sourceTree = SOURCE_ROOT; };
+		94AA2EAF0F326518007AEFE1 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+		94ACE17B0F79F4130005D5BA /* DataMinerDiskActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataMinerDiskActivity.m; sourceTree = "<group>"; };
+		94ACE17C0F79F4130005D5BA /* DataMinerDiskActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataMinerDiskActivity.h; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				944DDF960BC8F66A0018DBB5 /* IOKit.framework in Frameworks */,
+				944DDF970BC8F66A0018DBB5 /* SystemConfiguration.framework in Frameworks */,
+				94A8AC380BD43E690006D819 /* IOBluetooth.framework in Frameworks */,
+				94AA2EB00F326518007AEFE1 /* DiskArbitration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* iStatPro */ = {
+			isa = PBXGroup;
+			children = (
+				94A8AE270BD7028B0006D819 /* intel */,
+				944DDF770BC8F5EE0018DBB5 /* DataMiners */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = iStatPro;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				944DDF8D0BC8F6070018DBB5 /* iStatPro.h */,
+				944DDF8E0BC8F6070018DBB5 /* iStatPro.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94AA2EAF0F326518007AEFE1 /* DiskArbitration.framework */,
+				94A8AC370BD43E690006D819 /* IOBluetooth.framework */,
+				944DDF940BC8F66A0018DBB5 /* IOKit.framework */,
+				944DDF950BC8F66A0018DBB5 /* SystemConfiguration.framework */,
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* iStatPro.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* iStatPro_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		944DDF770BC8F5EE0018DBB5 /* DataMiners */ = {
+			isa = PBXGroup;
+			children = (
+				94066BD30FEDBE4300226F06 /* NetworkHistoryObject.h */,
+				94066BD40FEDBE4300226F06 /* NetworkHistoryObject.m */,
+				94ACE17C0F79F4130005D5BA /* DataMinerDiskActivity.h */,
+				94ACE17B0F79F4130005D5BA /* DataMinerDiskActivity.m */,
+				94AA2EAD0F3264EA007AEFE1 /* ISMDiskObject.h */,
+				94AA2EAC0F3264EA007AEFE1 /* ISMDiskObject.m */,
+				949C5F700CF2401F00ED694B /* ppp_msg.h */,
+				949C5F710CF2401F00ED694B /* PPPLib.h */,
+				949C5F720CF2401F00ED694B /* PPPLib.c */,
+				949C5F5E0CF23A4D00ED694B /* ISPNetworkConnectionController.h */,
+				949C5F5F0CF23A4D00ED694B /* ISPNetworkConnectionController.m */,
+				944DDF780BC8F5EE0018DBB5 /* ISPDataMinerBattery.h */,
+				944DDF790BC8F5EE0018DBB5 /* ISPDataMinerBattery.m */,
+				944DDF7A0BC8F5EE0018DBB5 /* ISPDataMinerCPU.h */,
+				944DDF7B0BC8F5EE0018DBB5 /* ISPDataMinerCPU.m */,
+				944DDF7C0BC8F5EE0018DBB5 /* ISPDataMinerDisks.h */,
+				944DDF7D0BC8F5EE0018DBB5 /* ISPDataMinerDisks.m */,
+				944DDF800BC8F5EE0018DBB5 /* ISPDataMinerMemory.h */,
+				944DDF810BC8F5EE0018DBB5 /* ISPDataMinerMemory.m */,
+				944DDF820BC8F5EE0018DBB5 /* ISPDataMinerNetwork.h */,
+				944DDF830BC8F5EE0018DBB5 /* ISPDataMinerNetwork.m */,
+				944DDF840BC8F5EE0018DBB5 /* ISPDataMinerTemps.h */,
+				944DDF850BC8F5EE0018DBB5 /* ISPDataMinerTemps.m */,
+				944DDF7E0BC8F5EE0018DBB5 /* ISPDataMinerFans.h */,
+				944DDF7F0BC8F5EE0018DBB5 /* ISPDataMinerFans.m */,
+				94A8AC040BD4379D0006D819 /* ISPBluetoothController.h */,
+				94A8AC050BD4379D0006D819 /* ISPBluetoothController.m */,
+				944E8CF40C1C85950050B1DF /* ISPSmartController.h */,
+				944E8CF50C1C85950050B1DF /* ISPSmartController.m */,
+				940800B30E3487030014C73F /* defines.h */,
+			);
+			path = DataMiners;
+			sourceTree = "<group>";
+		};
+		94A8AE270BD7028B0006D819 /* intel */ = {
+			isa = PBXGroup;
+			children = (
+				94A8AE280BD7028B0006D819 /* ISPIntelSensorController.h */,
+				94A8AE290BD7028B0006D819 /* ISPIntelSensorController.m */,
+				94A8AE2A0BD7028B0006D819 /* smc.c */,
+				94A8AE2B0BD7028B0006D819 /* smc.h */,
+				94A8B1AB0BD8C8DD0006D819 /* LICENSE */,
+			);
+			path = intel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* iStatPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "iStatPro" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iStatPro;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = iStatPro;
+			productReference = 8D5B49B6048680CD000E48DA /* iStatPro.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "iStatPro" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* iStatPro */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* iStatPro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				94A8B1AC0BD8C8DD0006D819 /* LICENSE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944DDF860BC8F5EE0018DBB5 /* ISPDataMinerBattery.m in Sources */,
+				944DDF870BC8F5EE0018DBB5 /* ISPDataMinerCPU.m in Sources */,
+				944DDF880BC8F5EE0018DBB5 /* ISPDataMinerDisks.m in Sources */,
+				944DDF890BC8F5EE0018DBB5 /* ISPDataMinerFans.m in Sources */,
+				944DDF8A0BC8F5EE0018DBB5 /* ISPDataMinerMemory.m in Sources */,
+				944DDF8B0BC8F5EE0018DBB5 /* ISPDataMinerNetwork.m in Sources */,
+				944DDF8C0BC8F5EE0018DBB5 /* ISPDataMinerTemps.m in Sources */,
+				944DDF8F0BC8F6070018DBB5 /* iStatPro.m in Sources */,
+				94A8AC060BD4379D0006D819 /* ISPBluetoothController.m in Sources */,
+				94A8AE2C0BD7028B0006D819 /* ISPIntelSensorController.m in Sources */,
+				94A8AE2D0BD7028B0006D819 /* smc.c in Sources */,
+				944E8CF60C1C85950050B1DF /* ISPSmartController.m in Sources */,
+				949C5F600CF23A4D00ED694B /* ISPNetworkConnectionController.m in Sources */,
+				949C5F730CF2401F00ED694B /* PPPLib.c in Sources */,
+				94AA2EAE0F3264EA007AEFE1 /* ISMDiskObject.m in Sources */,
+				94ACE17D0F79F4130005D5BA /* DataMinerDiskActivity.m in Sources */,
+				94066BD50FEDBE4300226F06 /* NetworkHistoryObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iStatPro_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = iStatPro;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iStatPro_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = iStatPro;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "iStatPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "iStatPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
