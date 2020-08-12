@@ -1,6 +1,7 @@
 /*
  * Apple System Management Control (SMC) Tool
- * Copyright (C) 2006 devnull 
+ * Copyright (C) 2006 devnull
+ * Updated from https://github.com/mwudka/mac-power-consumption/tree/fe9a3ea8dbe99234772fc7624caa8723b806a3e4
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,15 +20,15 @@
 
 #ifndef __SMC_H__
 #define __SMC_H__
-#endif
 
-#define VERSION               "0.01"
+#define VERSION               "1.0"
 
 #define OP_NONE               0
-#define OP_LIST               1 
+#define OP_LIST               1
 #define OP_READ               2
 #define OP_READ_FAN           3
 #define OP_WRITE              4
+#define OP_BRUTEFORCE         5
 
 #define KERNEL_INDEX_SMC      2
 
@@ -38,17 +39,11 @@
 #define SMC_CMD_READ_PLIMIT   11
 #define SMC_CMD_READ_VERS     12
 
-#define DATATYPE_FPE2         "fpe2"
-#define DATATYPE_UINT8        "ui8 "
-#define DATATYPE_UINT16       "ui16"
-#define DATATYPE_UINT32       "ui32"
-#define DATATYPE_SP78         "sp78"
-
 typedef struct {
-    char                  major;
-    char                  minor;
-    char                  build;
-    char                  reserved[1]; 
+    UInt8                 major;
+    UInt8                 minor;
+    UInt8                 build;
+    UInt8                 reserved[1];
     UInt16                release;
 } SMCKeyData_vers_t;
 
@@ -63,19 +58,19 @@ typedef struct {
 typedef struct {
     UInt32                dataSize;
     UInt32                dataType;
-    char                  dataAttributes;
+    UInt8                 dataAttributes;
 } SMCKeyData_keyInfo_t;
 
-typedef char              SMCBytes_t[32]; 
+typedef UInt8             SMCBytes_t[32];
 
 typedef struct {
-  UInt32                  key; 
-  SMCKeyData_vers_t       vers; 
+  UInt32                  key;
+  SMCKeyData_vers_t       vers;
   SMCKeyData_pLimitData_t pLimitData;
   SMCKeyData_keyInfo_t    keyInfo;
-  char                    result;
-  char                    status;
-  char                    data8;
+  UInt8                   result;
+  UInt8                   status;
+  UInt8                   data8;
   UInt32                  data32;
   SMCBytes_t              bytes;
 } SMCKeyData_t;
@@ -89,12 +84,14 @@ typedef struct {
   SMCBytes_t              bytes;
 } SMCVal_t;
 
-kern_return_t SMCOpen(io_connect_t *conn);
-kern_return_t SMCReadKey(UInt32Char_t key, SMCVal_t *val);
-kern_return_t SMCReadKey2(UInt32Char_t key, SMCVal_t *val,io_connect_t conn);
-kern_return_t SMCWriteSimple(UInt32Char_t key,char *wvalue,io_connect_t conn);
-void smc_init();
-void smc_close();
+UInt32 _strtoul(const char *str, int size, int base);
+void _ultostr(char *str, UInt32 val);
 
-float _strtof(char *str, int size, int e);
+kern_return_t SMCOpen(const char *serviceName, io_connect_t *conn);
+kern_return_t SMCClose(io_connect_t conn);
+kern_return_t SMCCall(io_connect_t conn, int index, SMCKeyData_t *inputStructure, SMCKeyData_t *outputStructure);
+kern_return_t SMCReadKey(io_connect_t conn, const UInt32Char_t key, SMCVal_t *val);
+kern_return_t SMCWriteKey(io_connect_t conn, const SMCVal_t *val);
+kern_return_t SMCWriteKeyUnsafe(io_connect_t conn, const SMCVal_t *val);
 
+#endif
